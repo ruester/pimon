@@ -32,7 +32,7 @@ if [ ! -e ${DB} ]; then
                    "DS:mem_cached:GAUGE:240:0:1024" \
                    "DS:mem_swap:GAUGE:240:0:32000" \
                    "DS:loadavg:GAUGE:240:0:1000" \
-                   "DS:rootfs_used:GAUGE:240:0:512000000" \
+                   "DS:rootfs_used:GAUGE:240:0:512000000000" \
                    "DS:clock_arm:GAUGE:240:0:2000" \
                    "DS:temp:GAUGE:240:0:100" \
                    "RRA:AVERAGE:0.5:1:525600" \
@@ -58,6 +58,7 @@ LOAD=${OUTPUT[0]}
 # rootfs usage
 OUTPUT=( $(df | grep rootfs) )
 ROOTFS=${OUTPUT[2]}
+ROOTFS=$(echo "${ROOTFS}*1000" | bc -l) # multiply by 1000
 
 # arm frequency
 CLOCK=$(vcgencmd measure_clock arm | cut -d "=" -f 2)
