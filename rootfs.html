@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Disk Space Usage</title>
+    <meta content="300" http-equiv="refresh">
+    <style type="text/css">
+        h1 { font-size:15px; font-color:grey; }
+        div img { margin:10px; }
+        body {background-color: #000000; }
+        ul#navigation li {font-family:serif; font-size:16px; list-style:none; display:inline; margin:0.4em; padding:0;}
+        ul#navigation {padding: 0;}
+        ul#navigation a:link, ul#navigation a:visited, ul#navigation a:active {color:orange;}
+        ul#navigation2 li {font-family:monospace; font-size:13px; list-style:none; display:inline; margin:0.4em; padding:0;}
+        ul#navigation2 {padding: 0;}
+        ul#navigation2 a:link, ul#navigation2 a:visited, ul#navigation2 a:active {color:orange; text-decoration:none}
+    </style>
+</head>
+<body>
+    <ul id="navigation">
+        <li><a href="temperature.html">Temperature</a></li>
+        <li><a href="clock_arm.html">Frequency</a></li>
+        <li><a href="memory.html">Memory</a></li>
+        <li><a href="loadavg.html">Load Average</a></li>
+        <li><a href="rootfs.html">Disk Space</a></li>
+    </ul>
+
+<!--
+    <ul id="navigation2">
+        <li id="average"><a href="#average">AVERAGE</a></li>
+        <li><a href="#max">MAX</a></li>
+        <li><a href="#min">MIN</a></li>
+    </ul>
+
+    <h1>AVERAGE</h1>
+-->
+
+    <div>
+    <img src="png/disk_usage_hour.png" />
+    </div>
+    <div>
+    <img src="png/disk_usage_day.png" />
+    </div>
+    <div>
+    <img src="png/disk_usage_week.png" />
+    </div>
+    <div>
+    <img src="png/disk_usage_month.png" />
+    </div>
+    <div>
+    <img src="png/disk_usage_month6.png" />
+    </div>
+    <div>
+    <img src="png/disk_usage_year.png" />
+    </div>
+
+<!--
+    <ul id="navigation2">
+        <li id="max"><a href="#average">AVERAGE</a></li>
+        <li><a href="#max">MAX</a></li>
+        <li><a href="#min">MIN</a></li>
+    </ul>
+
+    <h1>MAX</h1>
+-->
+
+<!--
+    <ul id="navigation2">
+        <li id="min"><a href="#average">AVERAGE</a></li>
+        <li><a href="#max">MAX</a></li>
+        <li><a href="#min">MIN</a></li>
+    </ul>
+
+    <h1>MIN</h1>
+-->
+</body>
+</html>
