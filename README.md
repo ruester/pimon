@@ -3,7 +3,7 @@ pimon
 
 Tool for monitoring some system information of the Raspberry Pi.
 
-##Installation
+## Installation
 
 Install 'rrdtool' and a webserver on your Pi.
 Then:
